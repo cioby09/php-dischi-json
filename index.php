@@ -24,7 +24,31 @@
 </head>
 
 <body>
+    <div id="app">
+        <header>
+            <div class="container d-flex align-items-center">
+                <i class="fa-brands fa-spotify"></i>
+            </div>
+        </header>
 
+        <main class="overflow-auto">
+            <div class="container">
+                <div class="row row-cols-3 px-5">
+                    <div v-for="(disk, index) in dischi" :key="index" class="col p-4">
+                        <div class="card text-center">
+                            <img :src="disk.poster" class="pt-4 px-5" alt="Cover">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{ disk.title }} </h5>
+                                <p class="card-author"> {{ disk.author }} </p>
+                                <h5 class="card-year"> {{ disk.year }} </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
